@@ -1,13 +1,22 @@
 #include <iostream>
 using namespace std;
 
+
+
 int main()
 {
-    string name;
+    string name = "";
 
-    cout << "What is your name? ";
-    cin >> name;
-    cout << "Hello, " << name << "!" << std::endl;
+    do{
+        cout << "What is your name? ";
+        cin >> name;
+        if(name == "exit"){
+            cout << "Goodbye!" << std::endl;
+            break;
+        }
+        cout << "Hello, " << name << "!" << std::endl;
+
+    } while(true);
 
     return 0;
 }
